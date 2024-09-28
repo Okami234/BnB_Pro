@@ -1,0 +1,197 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outfit Suggestions</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+      h1{
+        color: #333;
+        margin-top: 30px;
+      }
+      
+      .suggestion-box {
+        display: inline-block;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+      }
+      
+      .outfit {
+        font-size: 1.2em;
+        margin: 15px 0;
+      }
+      
+      .btn {
+        background-color: #333;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .btn:hover {
+        background-color: #555;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>Today's Outfit Suggestion</h1>
+
+    <div class="suggestion-box">
+      <div id="outfit" class="outfit">Click below for an outfit!</div>
+      <button class="btn" onclick="generateOutfit()">
+        Get Outfit Suggestion
+      </button>
+    </div>
+
+    <script>
+        // alert("")
+      const outfits = [
+        "Casual: White T-shirt, Blue Jeans, Sneakers",
+        "Business: Blazer, Black Trousers, Oxford Shoes",
+        "Athleisure: Hoodie, Joggers, Running Shoes",
+        "Summer: Floral Shirt, Chino Shorts, Loafers",
+        "Winter: Wool Coat, Turtleneck, Boots",
+        "Casual Chic: Striped Blouse, High-Waisted Jeans, Ankle Boots",
+        "Date Night: Red Satin Dress, Black Heels, Statement Earrings",
+        "Urban Streetwear: Oversized Hoodie, Cargo Pants, Chunky Sneakers",
+        "Weekend Vibes: Denim Jacket, White Tee, Black Leggings, Converse",
+        "Boho: Flowy Maxi Dress, Gladiator Sandals, Wide-Brim Hat",
+        "Sporty: Tank Top, Biker Shorts, Athletic Shoes",
+        "Office Ready: Blazer, Pleated Midi Skirt, Loafers",
+        "Summer Festival: Crochet Top, High-Waisted Shorts, Sandals",
+        "Winter Layered: Trench Coat, Scarf, Skinny Jeans, Knee-High Boots",
+        "Minimalist: White Button-Up, Black Culottes, Flats",
+        "Brunch: Knit Sweater, Floral Skirt, Ankle Boots",
+        "Beach Day: Bikini, Cover-Up, Flip-Flops, Sun Hat",
+        "Formal Evening: Black Suit, White Shirt, Oxford Shoes",
+        "Relaxed Lounge: Oversized Sweater, Joggers, Slippers",
+        "Preppy: Cardigan, Plaid Skirt, Oxford Shoes"
+      ];
+
+      function generateOutfit() {
+        const randomIndex = Math.floor(Math.random() * outfits.length);
+        document.getElementById("outfit").textContent = outfits[randomIndex];
+      }
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothing Outfit Suggestions</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.outfits {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  flex-wrap: wrap;
+  
+}
+
+.outfit {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 22%;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.outfit img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.outfit h2 {
+  color: #333;
+}
+
+.outfit p {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .outfit {
+    width: 45%;
+  }
+}
+
+@media (max-width: 500px) {
+  .outfit {
+    width: 100%;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Clothing Outfit Suggestions</h1>
+    <p>Find inspiration for your next outfit!</p>
+  </header>
+
+  <section class="outfits">
+    <div class="outfit">
+      <img src="images/casual.jpeg" alt="Casual Outfit">
+      <h2>Casual Look</h2>
+      <p>A simple and comfortable outfit for everyday wear. Pair a plain t-shirt with jeans and sneakers.</p>
+    </div>
+
+    <div class="outfit">
+      <img src="images/formals.jpeg" alt="Formal Outfit" >
+      <h2>Formal Look</h2>
+      <p>Stay sharp with a fitted suit and tie. Perfect for professional settings or formal events.</p>
+    </div>
+
+    <div class="outfit">
+      <img src="images/sport.jpeg" alt="Sporty Outfit">
+      <h2>Sporty Look</h2>
+      <p>Get active with a breathable sports t-shirt and shorts, paired with running shoes.</p>
+    </div>
+
+    <div class="outfit">
+      <img src="images/Beach.jpeg" alt="Summer Outfit">
+      <h2>Summer Look</h2>
+      <p>Stay cool in the heat with a light, floral dress or shorts and a tank top, along with sandals.</p>
+    </div>
+  </section>
+</body>
+</html>

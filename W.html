@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ChicCloset: Your Wardrobe Assistant</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f8f9;
+    color: #444;
+}
+
+header {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-bottom: 5px solid #ff7e5f;
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+nav {
+    background-color: #ff7e5f;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffe4e1;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #ff7e5f;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    padding: 12px;
+    border: 2px solid #ff7e5f;
+    border-radius: 8px;
+    width: calc(50% - 15px);
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #feb47b;
+    transform: scale(1.05);
+}
+
+.items-list {
+    margin-top: 10px;
+}
+
+.items-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.items-list li {
+    background-color: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ff7e5f;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f9f9f9 0%, #e3fdfd 100%);
+        }
+        .wardrobe {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #3f51b5;
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-family: 'Georgia', serif;
+        }
+        .category {
+            margin-bottom: 40px;
+        }
+        .category h2 {
+            background: linear-gradient(to right, #ff5722, #ff9800);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .item {
+            flex: 1 1 200px;
+            margin: 15px;
+            padding: 20px;
+            background: #e1f5fe;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        .item:hover {
+            background: linear-gradient(to bottom right, #03a9f4, #81d4fa);
+            transform: scale(1.05);
+        }
+        .item img {
+            max-width: 120px;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .item p {
+            font-size: 18px;
+            color: #333;
+            margin: 0;
+            font-weight: bold;
+        }
+        .item p.description {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WARDROBE</h1>
+        <p>Your Ultimate Wardrobe Assistant for a Sustainable Style</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="hero.html">Home</a></li>
+            <li><a href="#tips">Eco-Friendly Tips</a></li>
+            <li><a href="#wardrobe">View My Wardrobe</a></li>
+            
+        </ul>
+    </nav>
+
+    <main>
+        <section id="add-item" class="card">
+            <h2>📦 Add a New Fashion Piece</h2>
+            
+            <div class="input-group">
+                <input type="text" id="itemCategory" placeholder="Category (e.g., Dress, Shoes)" required>
+                <input type="text" id="itemName" placeholder="Item Name" required>
+            </div>
+            <button style="margin: 10px 130px; width: 50%;">Upload your dress Image</button>
+        </section>
+
+        <section id="tips" class="card">
+            <h2>🌍 Eco-Friendly Fashion Tips</h2>
+            <p>💚 Donate clothes you no longer wear.</p>
+            <p>♻️ Buy second-hand to reduce waste.</p>
+            <p>🌱 Support sustainable brands and practices.</p>
+        </section>
+    </main>
+
+    <section id="wardrobe">
+        <div class="wardrobe"></div>
+            <h1>My Colorful Wardrobe</h1>
+            
+            <!-- Clothing Section -->
+            <div class="category">
+                <h2>Clothing</h2>
+                <div class="items">
+                    <div class="item">
+                        <img src="images/tshirt.jpeg" alt="T-shirt">
+                        <p>T-shirt</p>
+                        <p class="description">Casual and comfortable</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/evening.jpeg" alt="Dress">
+                        <p>Dress</p>
+                        <p class="description">Elegant evening dress</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/jacket.jpeg" alt="Jacket">
+                        <p>Jacket</p>
+                        <p class="description">Warm winter jacket</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footwear Section -->
+            <div class="category">
+                <h2>Footwear</h2>
+                <div class="items">
+                    <div class="item">
+                        <img src="images/sneakers.jpeg" alt="Sneakers">
+                        <p>Sneakers</p>
+                        <p class="description">Comfortable everyday shoes</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/slippers.jpeg" alt="Heels">
+                        <p>Footwear</p>
+                        <p class="description">Stylish Footwears</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Accessories Section -->
+            <div class="category">
+                <h2>Accessories</h2>
+                <div class="items">
+                    <div class="item">
+                        <img src="images/watch.jpeg" alt="Watch">
+                        <p>Watch</p>
+                        <p class="description">Classic leather watch</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/hat.jpeg" alt="Hat">
+                        <p>Hat</p>
+                        <p class="description">Summer beach hat</p>
+                    </div>
+                    <div class="item">
+                        <img src="images/scarf.jpeg" alt="Scarf">
+                        <p>Scarf</p>
+                        <p class="description">Cozy winter scarf</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+    <footer>
+        <p>© 2024 ChicCloset - All Rights Reserved</p>
+    </footer>
+
+</body>
+</html

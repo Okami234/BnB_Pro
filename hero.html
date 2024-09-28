@@ -1,0 +1,328 @@
+<!-- npx tailwindcss -i ./src/input.css -o hero.css --watch -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hero Section</title>
+    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+        body{
+            background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+
+        }
+        .scroll-container {
+            overflow: hidden; /* Hide scrollbar */
+            position: relative; /* Position for animation */
+            width: 100%; /* Full width of the parent */
+        }
+
+        .scrolling {
+            display: flex; /* Horizontal layout */
+            animation: scroll 8s linear infinite; /* Adjust duration for speed */
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0); /* Start position */
+            }
+            100% {
+                transform: translateX(-50%); /* End position to scroll */
+            }
+        }
+
+        .testimonial-card {
+            min-width: 320px; /* Minimum width for each card */
+            margin: 0 1.5rem; /* Space between cards */
+        }
+
+        /* here faq related styles */
+        .accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10%;
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    background: #b989f0;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .content {
+    background: #b989f0c2;
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    
+    padding: 0 20px;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 30px 30px;
+}
+
+.accordion input[type="radio"]:checked + label::after {
+    transform: rotate(120deg);
+}
+
+.faq-1 h2 {
+    text-align: center;
+    margin-bottom: -53px;
+    padding: 20px 0px 0 0;
+}
+
+.end-line {
+    text-align: center;
+    padding: 10px;
+}
+
+</style>
+</head>
+<body class="">
+
+    <!-- navbar starts here  -->
+    <header class="bg-black shadow-md">
+        <div class="container flex items-center justify-between p-4 mx-auto">
+            <div class="logo">
+                <img src="images/SustainSort_ink (1).jpg" alt="Profile Picture" class="w-12 h-12 mb-6 border-2 border-white rounded-h-full" style="border-radius: 50%;">
+            </div>
+    
+            <nav class="topics">
+                <ul class="flex space-x-8">
+                    <li><a href="W.html" class="text-lg font-semibold text-white transition hover:text-pink-400">Wardrobe</a></li>
+                    <li><a href="S.html" class="text-lg font-semibold text-white transition hover:text-pink-400">Outfit Suggestions</a></li>
+                    <li><a href="trends.html" class="text-lg font-semibold text-white transition hover:text-pink-400">Trends</a></li>
+                    <li><a href="#contact" class="text-lg font-semibold text-white transition hover:text-pink-400">Contact Us</a></li>
+                </ul>
+            </nav>
+    
+            <div class="profile-pic">
+                <img src="images/profile.webp" alt="Profile Picture" class="w-12 h-12 border-2 border-white rounded-full">
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section Start -->
+     <!-- Hero Section Start -->
+     <section class="relative flex items-center h-screen bg-center bg-cover" style="background-image: url('images/What-is-sustainable-fashion.webp');">
+        <div class="container px-6 mx-auto">
+            <div class="max-w-lg">
+                <h1 class="mb-6 text-4xl italic font-bold text-blue-600 shadow-lg whitespace-nowrap">"Organize Smart, Live Sustainably"</h1>
+                <p class="text-lg font-bold text-white">Track your wardrobe, minimize waste, and make eco-friendly fashion choices with ease.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+     
+<!-- Testimonial Section -->
+<div class="mt-40 user_testimony">
+    <div class="scroll-container">
+        <div id="testimony" class="scrolling">
+            <!-- Testimonial: User 1 -->
+            <div id="user1" class="testimonial-card">
+                <div class="p-4 bg-gray-100 rounded-lg shadow-lg bg-opacity-90 w-80 max-h-96">
+                    <img class="inline object-cover w-16 h-16 rounded-full" src="images/offical lady.avif" alt="User Image">
+                    <p class="inline font-semibold">Sarah</p>
+                    <p class="inline">, Urban Professional</p>
+                    <div class="mb-4">
+                        <p class="text-gray-700">"This platform has completely transformed my wardrobe! I no longer buy duplicates and love the sustainable tips."</p>
+                        <span class="text-sm text-gray-500">Reviewed on 09-05-2023</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial: User 2 -->
+            <div id="user2" class="testimonial-card">
+                <div class="p-4 bg-gray-100 rounded-lg shadow-lg bg-opacity-90 w-80 max-h-96">
+                    <img class="inline object-cover w-16 h-16 rounded-full" src="images/confident-man.webp" alt="User Image">
+                    <p class="inline font-semibold">Alex</p>
+                    <p class="inline">, Minimalist</p>
+                    <div class="mb-4">
+                        <p class="text-gray-700">"I love how I can track what I already own. It helps me stay focused on mindful consumption."</p>
+                        <span class="text-sm text-gray-500">Reviewed on 08-28-2023</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial: User 3 -->
+            <div id="user3" class="testimonial-card">
+                <div class="p-4 bg-gray-100 rounded-lg shadow-lg bg-opacity-90 w-80 max-h-96">
+                    <img class="inline object-cover w-16 h-16 rounded-full" src="images/lady.avif" alt="User Image">
+                    <p class="inline font-semibold">Priya</p>
+                    <p class="inline">, Sustainable Fashion Enthusiast</p>
+                    <div class="mb-4">
+                        <p class="text-gray-700">"The sustainability tracker has opened my eyes to how I can make better fashion choices."</p>
+                        <span class="text-sm text-gray-500">Reviewed on 07-15-2023</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial: User 4 -->
+            <div id="user4" class="testimonial-card">
+                <div class="p-4 bg-gray-100 rounded-lg shadow-lg bg-opacity-90 w-80 max-h-96">
+                    <img class="inline object-cover w-16 h-16 rounded-full" src="images/girish.jpg" alt="User Image">
+                    <p class="inline font-semibold">Girish</p>
+                    <p class="inline">, Eco-conscious Shopper</p>
+                    <div class="mb-4">
+                        <p class="text-gray-700">"Thanks to this app, I now only buy eco-friendly clothing and use everything I already own."</p>
+                        <span class="text-sm text-gray-500">Reviewed on 10-01-2023</span>
+                    </div>
+                </div>
+            </div>
+            <div id="user1" class="testimonial-card">
+                <div class="p-4 bg-gray-100 rounded-lg shadow-lg bg-opacity-90 w-80 max-h-96">
+                    <img class="inline object-cover w-16 h-16 rounded-full" src="images/offical lady.avif" alt="User Image">
+                    <p class="inline font-semibold">Sarah</p>
+                    <p class="inline">, Urban Professional</p>
+                    <div class="mb-4">
+                        <p class="text-gray-700">"This platform has completely transformed my wardrobe! I no longer buy duplicates and love the sustainable tips."</p>
+                        <span class="text-sm text-gray-500">Reviewed on 09-05-2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ section  -->
+<div class="faq-1">
+    <h2>Frequently Asked Questions</h2>
+
+    <ul class="r accordion">
+        <li class="">
+            <input type="radio" name="accordion" id="first">
+            <label for="first">What is this wardrobe management platform?</label>
+            <div class="rounded-lg content">
+                <p>This platform helps you organize your wardrobe, track your clothing items, and make sustainable fashion choices by minimizing waste and maximizing the use of what you already own.</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="second">
+            <label for="second">How does this platform promote sustainability?</label>
+            <div class="content">
+                <p>Our platform encourages sustainable fashion by helping you track your purchases, suggesting eco-friendly clothing options, and providing tips for reducing overconsumption.</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="third">
+            <label for="third">Can I track what I already own?</label>
+            <div class="content">
+                <p>Yes! You can easily log all your clothing items into the app, which allows you to see what you have and avoid buying duplicates.</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="fourth">
+            <label for="fourth">Is this platform free to use?</label>
+            <div class="content">
+                <p>Yes, our basic features are available for free. However, we offer premium features that enhance your wardrobe management experience for a monthly fee.</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="fifth">
+            <label for="fifth">How do I get started?</label>
+            <div class="content">
+                <p>Simply sign up on our website and start adding your clothing items. You'll receive personalized recommendations and tips right away!</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="accordion" id="sixth">
+            <label for="sixth">Can I access my wardrobe management account on multiple devices?</label>
+            <div class="content">
+                <p>Yes! You can access your account from any device with internet connectivity. Your wardrobe information is stored securely in the cloud.</p>
+            </div>
+        </li>
+    </ul>
+    
+    <div> 
+    </div>
+</div>
+
+
+<footer class="py-10 text-white bg-gray-900" id="contact">
+    <div class="max-w-6xl px-4 mx-auto md:px-8">
+        <div class="flex flex-wrap justify-between">
+            <div class="w-full mb-8 md:w-1/4">
+                <h3 class="mb-4 text-lg font-semibold">About SustainSort</h3>
+                <p>Your ultimate wardrobe management solution for sustainable fashion. Help reduce waste while maximizing your style.</p>
+            </div>
+            <div class="w-full mb-8 md:w-1/4">
+                <h3 class="mb-4 text-lg font-semibold">Quick Links</h3>
+                <ul>
+                    <li class="mb-2"><a href="#features" class="text-pink-400 hover:underline">Features</a></li>
+                    <li class="mb-2"><a href="#faqs" class="text-pink-400 hover:underline">FAQs</a></li>
+                    <li class="mb-2"><a href="#contact" class="text-pink-400 hover:underline">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="w-full mb-8 md:w-1/4">
+                <h3 class="mb-4 text-lg font-semibold">Contact Us</h3>
+                <p>Email: <a href="mailto:support@sustainsort.com" class="text-pink-400 hover:underline">support@sustainsort.com</a></p>
+                <p>Phone: <span class="text-pink-400">+123 456 7890</span></p>
+            </div>
+            <div class="w-full mb-8 md:w-1/4">
+                <h3 class="mb-4 text-lg font-semibold">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                  
+                    <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white">  <i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="mt-8 text-center">
+            <p class="text-sm">&copy; 2024 SustainSort. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+<script>
+    // Duplicate testimonials for continuous scrolling
+    const testimonyContainer = document.getElementById('testimony');
+    const testimonials = testimonyContainer.innerHTML;
+    testimonyContainer.innerHTML += testimonials; // Append the same testimonials again
+</script>
+</html>
